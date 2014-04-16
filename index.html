@@ -1,0 +1,118 @@
+<!-- <!doctype html> -->
+<!-- IDEAS?... 
+	1. autocomplete search spotify tracks to make playlist
+	ex call http://ws.spotify.com/search/1/track.json?q=foo
+	2. save playlist using Parse.com or Stackmob
+	3. have user login with parse
+	4. export playlist?...
+-->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Backbone.js + RequireJS + Spotify + Backlift</title>
+	<link rel="stylesheet" href="components/common/base.css">
+	<link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css">
+	<script src="components/jquery/jquery.js"></script>
+	<script src="components/common/base.js"></script>
+	<script src="components/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+	.span4{
+		width:540px;
+	}
+	.container{
+		width:1100px;
+	}
+</style>
+<body>
+	<section id="todoapp">
+			<div class="container">
+        <div class="row">
+			<div class="span4">
+				<div class="well">
+					<h2>Spotify Search</h2>
+						<div class="btn-group" style="width:450px;">
+							<div class="dropdown">
+								<form id="autocomplete" class="well form-search ">
+								  <input name="search" id="plugin" autocomplete="off" class="search-query">
+								  <!-- drop down -->
+									<ul class="dropdown-menu" id="collection" role="menu" aria-labelledby="dLabel" ></ul>
+								</form>
+							</div>
+						</div>
+				</div>
+			</div>
+			
+		<!-- </header> -->
+		<!-- 
+		<section id="main">
+			<input id="toggle-all" type="checkbox">
+			<label for="toggle-all">Mark all as complete</label>
+			<ul id="todo-list" class="autocomplete" ></ul>
+		</section> -->
+		<!-- <footer id="footer"></footer> -->
+	
+	<!-- NOTE: making a second list -->
+	<!-- <header id="header">
+		<h1>Selected Playlist</h1>
+	</header> -->
+
+	<div class="span4">
+		<div class="well">
+			<div class="btn-toolbar pull-right">
+		  		<button class="btn btn-primary" id="clearStorage">Clear Storage</button>
+			</div>
+			<div class="btn-toolbar pull-right" style="padding-right:10px;">
+		  		<button class="btn btn-primary">Export Playlist</button>
+			</div>
+			<h2 >Playlist</h2>
+			<p><span class="label label-success">TRACKS</span></p>
+			<ul id="selected-song-list"></ul>		
+		</div>
+	</div>
+	</div>
+	</div>
+	</section>
+	<!-- NOTE: end second list -->
+	<br /><br />
+	<footer id="info">
+		<p>Double-click to edit a song</p>
+		<a href="spotify:trackset:Playlist:49MsPNQCOmxvIYi9AdoPzY,6fUlrsHaz4QfCNF31rk2dU,5KiTsR2h8jnzkvTeucxoAn,6kidUwWb8tB9ktfy7U76iX,6mlUEdb90RqwUisnp65lG7,6KOEK6SeCEZOQkLj5M1PxH,3psrcZoGRaWh6FMGael1NX,3EHLii6bnZxJxsCfLlIb83,0xJtHBdhpdLuClaSQYddI4,6fsdOFwa9lTG7WKL9sEWRU">Play in Spotify</a>
+		<p>Powered by <a href="http://addyosmani.github.com/todomvc/">Spotify API</a> and Backlift</p>
+	</footer>
+	<!-- test -->
+<!-- <div class="span4">
+	<div class="well well-large">
+		<h2 class="text-warning">Bronze</h2>
+		<p><span class="label label-success">POPULAR</span></p>
+		<ul>
+			<li>20 users</li>
+			<li>Unlimited access with no limits</li>
+			<li>5TB of space</li>
+		</ul>          
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+		<hr>
+		<h3>$10.99 / month</h3>
+		<hr>
+		<p><a class="btn btn-success btn-large" href="#"><i class="icon-ok"></i> Select plan</a></p>
+	</div>
+</div>
+<div class="span4">
+	<div class="well">
+		<h2 class="text-info">Economy</h2>
+		<p><span class="label label-info">BUDGET</span></p>
+		<ul>
+			<li>10 users</li>
+			<li>5TB of space</li>
+		</ul>          
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+		<hr>
+		<h3>$8.99 / month</h3>
+		<hr>
+      <p><a class="btn btn-large" href="#"><i class="icon-ok"></i> Select plan</a></p>
+	</div>
+</div> -->
+	<script data-main="app/main" src="components/requirejs/require.js"></script>
+</body>
+</html>
